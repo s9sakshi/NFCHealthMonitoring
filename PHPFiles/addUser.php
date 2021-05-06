@@ -9,6 +9,8 @@ include 'dbDetails.php';
 	$e4=$_POST['e4'];
 	$e5=$_POST['e5'];
 	$e6=$_POST['e6'];
+	$e7=$_POST['e7'];
+	
 	
 	/*
 	$e1="5678";
@@ -17,9 +19,10 @@ include 'dbDetails.php';
 	$e4="ghi";
 	$e5="jkl";
 	$e6="mno";
-	$e7="pqr";*/
+	$e7="pqr";
+	*/
 	 
-	$sql="select * from doctor where id='$e1'";
+	$sql="select * from users where id='$e1'";
 	$result=$conn->query($sql);
 
 	if($result->num_rows>0)
@@ -29,7 +32,7 @@ include 'dbDetails.php';
 	else
 	{
 	
-			$sql="insert into doctor values('$e1','$e2','$e3','$e4','$e5','$e6')";
+			$sql="insert into users values('$e1','$e2','$e3','$e4','$e5','$e6')";
 			if ($conn->query($sql) == TRUE) 
 				{
 				
